@@ -14,7 +14,7 @@ module.exports = {
         primarybutton: "#af93d7",
         secondarybutton: "#ffffff",
         accent: "#d193d7",
-        secbg: "#2c5d87",
+        secbg: "#0f172a",
       },
       screens: {
         '2xl': '1320px',
