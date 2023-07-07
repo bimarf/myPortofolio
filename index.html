@@ -1,12 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="dist/output.css" />
+    <link rel="stylesheet" href="dist/css/final.css" />
     <title>My Portofolio</title>
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
   </head>
-  <body class="bg-background">
+  <body class="bg-background dark:bg-slate-900">
     <!-- Header Start -->
     <header
       class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
@@ -40,43 +51,57 @@
 
             <nav
               id="nav-menu"
-              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:relative lg:bg-transparent lg:shadow-none lg:rounded-none lg:max-w-full"
+              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:relative lg:bg-transparent lg:shadow-none lg:rounded-none lg:max-w-full dark:bg-slate-900 dark:shadow-accent lg:dark:bg-transparent"
             >
               <ul class="block lg:flex">
                 <li class="group">
                   <a
                     href="#home"
-                    class="text-text text-base font-semibold py-2 mx-8 flex group-hover:text-accent"
+                    class="text-text text-base font-semibold py-2 mx-8 flex group-hover:text-accent dark:text-slate-200"
                     >Me</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#about"
-                    class="text-text text-base font-semibold py-2 mx-8 flex group-hover:text-accent"
+                    class="text-text text-base font-semibold py-2 mx-8 flex group-hover:text-accent dark:text-slate-200"
                     >Tentang saya</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#portofolio"
-                    class="text-text text-base font-semibold py-2 mx-8 flex group-hover:text-accent"
+                    class="text-text text-base font-semibold py-2 mx-8 flex group-hover:text-accent dark:text-slate-200"
                     >Portofolioku</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#language"
-                    class="text-text text-base font-semibold py-2 mx-8 flex group-hover:text-accent"
+                    class="text-text text-base font-semibold py-2 mx-8 flex group-hover:text-accent dark:text-slate-200"
                     >Language</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#contact"
-                    class="text-text text-base font-semibold py-2 mx-8 flex group-hover:text-accent"
+                    class="text-text text-base font-semibold py-2 mx-8 flex group-hover:text-accent dark:text-slate-200"
                     >Kontak saya</a
                   >
+                </li>
+                <li class="flex items-center pl-8">
+                  <div class="flex py-2">
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div
+                        class="h-5 w-9 bg-sky-200 cursor-pointer flex items-center rounded-full p-1 transition duration-300 ease-in-out"
+                      >
+                        <div
+                          class="toggle-circle h-4 w-4 rounded-full bg-yellow-500 transition duration-300 ease-in-out"
+                        ></div>
+                      </div>
+                    </label>
+                  </div>
                 </li>
               </ul>
             </nav>
@@ -87,13 +112,14 @@
     <!-- Header End -->
 
     <!-- MC Section Start -->
-    <section id="home" class="pt-36">
+    <section id="home" class="pt-36 dark:bg-slate-900">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
             <h1 class="text-base font-semibold text-accent md:text-xl">
               Hai guys 🤙🏻, saya
-              <span class="block font-bold text-text text-4xl lg:text-5xl"
+              <span
+                class="block font-bold text-text text-4xl lg:text-5xl dark:text-slate-200"
                 >Bima Rengga</span
               >
             </h1>
@@ -136,14 +162,16 @@
 
     <!-- About Section Start -->
 
-    <section id="about" class="pt-36 pb-32">
+    <section id="about" class="pt-36 pb-32 dark:bg-slate-900">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full px-4 mb-10 lg:w-1/2">
             <h4 class="font-bold uppercase text-accent text-lg mb-3">
               Tentang Saya
             </h4>
-            <h2 class="font-bold text-text text-3xl mb-5 max-w-md lg:text-4xl">
+            <h2
+              class="font-bold text-text text-3xl mb-5 max-w-md lg:text-4xl dark:text-slate-200"
+            >
               Saya sebagai Web Developer selama 3 tahun terakhir.
             </h2>
             <p class="font-medium text-base text-slate-500 max-w-xl lg:text-lg">
@@ -156,7 +184,7 @@
 
           <div class="w-full px-4 mb-10 lg:w-1/2">
             <h3
-              class="font-semibold text-text text-2xl mb-4 lg:text-3xl lg:pt-10"
+              class="font-semibold text-text text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-slate-200"
             >
               Mari Berteman
             </h3>
@@ -170,7 +198,7 @@
               <a
                 href="https://github.com/bimarf"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border border-slate-300 hover:border-accent hover:bg-accent hover:text-white"
+                class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border border-slate-300 hover:border-accent hover:bg-accent hover:text-white dark:text-slate-300"
               >
                 <svg
                   role="img"
@@ -190,7 +218,7 @@
               <a
                 href="https://instagram.com/bimargg_"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border border-slate-300 hover:border-accent hover:bg-accent hover:text-white"
+                class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border border-slate-300 hover:border-accent hover:bg-accent hover:text-white dark:text-slate-300"
               >
                 <svg
                   role="img"
@@ -210,7 +238,7 @@
               <a
                 href="https://www.tiktok.com/@di3for666"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border border-slate-300 hover:border-accent hover:bg-accent hover:text-white"
+                class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border border-slate-300 hover:border-accent hover:bg-accent hover:text-white dark:text-slate-300"
               >
                 <svg
                   role="img"
@@ -230,7 +258,7 @@
               <a
                 href="https://www.linkedin.com/in/bima-rengga-917a4b183"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border border-slate-300 hover:border-accent hover:bg-accent hover:text-white"
+                class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border border-slate-300 hover:border-accent hover:bg-accent hover:text-white dark:text-slate-300"
               >
                 <svg
                   role="img"
@@ -255,7 +283,7 @@
 
     <!-- Portofolio Start -->
 
-    <section id="portofolio" class="pt-36 pb-16 bg-gray-100">
+    <section id="portofolio" class="pt-36 pb-16 bg-gray-100 dark:bg-secbg">
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-full mx-auto text-center mb-16">
@@ -263,11 +291,13 @@
               My Portofolio
             </h4>
             <h2
-              class="font-bold text-text text-3xl mb-4 sm:text-3xl lg:text-4xl"
+              class="font-bold text-text text-3xl mb-4 sm:text-3xl lg:text-4xl dark:text-slate-200"
             >
               Project
             </h2>
-            <p class="font-medium text-md text-slate-500 md:text-lg">
+            <p
+              class="font-medium text-md text-slate-500 md:text-lg dark:text-slate-300"
+            >
               Berikut merupakan project yang pernah saya buat selama saya
               medalami dunia IT di lingkup sekolah dan juga dunia kerja
               profesional.
@@ -287,7 +317,9 @@
                 <h3 class="font-semibold text-xl text-text mt-5 mb-3">
                   Loghic Connect
                 </h3>
-                <p class="font-medium text-base text-slate-500">
+                <p
+                  class="font-medium text-base text-slate-500 dark:text-slate-300"
+                >
                   Loghic Connect merupakan perusahaan asal Australia yang
                   bergerak dibidang penyedia layanan webinar online. Selama 2
                   tahun lebih saya bekerja untuk pengembangan produk mereka agar
@@ -306,7 +338,9 @@
                 <h3 class="font-semibold text-xl text-text mt-5 mb-3">
                   Rubbin Web Admin
                 </h3>
-                <p class="font-medium text-base text-slate-500">
+                <p
+                  class="font-medium text-base text-slate-500 dark:text-slate-300"
+                >
                   Rubbin adalah project akhir yang saya buat untuk syarat
                   kelulusan, web ini dibuat karena melihat bank sampah disekitar
                   yang masih menggunakan cara konvesional untuk mencatat data,
@@ -324,7 +358,9 @@
                 <h3 class="font-semibold text-xl text-text mt-5 mb-3">
                   Londree.id
                 </h3>
-                <p class="font-medium text-base text-slate-500">
+                <p
+                  class="font-medium text-base text-slate-500 dark:text-slate-300"
+                >
                   Londree.id adalah aplikasi untuk kasir laundry. Saya terlibat
                   pengembangan web admin dan api untuk aplikasi Londree.id ini
                   selama melakukan magang di Indonesia IT Yogyakarta.
@@ -340,7 +376,7 @@
 
     <!-- Language Start -->
 
-    <section id="language" class="pt-36 pb-32 bg-secbg">
+    <section id="language" class="pt-36 pb-32 bg-secbg dark:bg-gray-100">
       <div class="container">
         <div class="w-full px-4">
           <div class="mx-auto text-center mb-16">
@@ -348,7 +384,7 @@
               Language
             </h4>
             <h2
-              class="font-bold text-white text-2xl mb-4 sm:text-3xl lg:text-4xl"
+              class="font-bold text-slate-200 text-2xl mb-4 sm:text-3xl lg:text-4xl dark:text-text"
             >
               Bahasa pemrograman yang saya gunakan.
             </h2>
@@ -430,13 +466,13 @@
 
     <!-- Contact Section Start -->
 
-    <section id="contact" class="pt-36 pb-32">
+    <section id="contact" class="pt-36 pb-32 dark:bg-slate-900">
       <div class="container">
         <div class="w-ful px-4">
           <div class="mx-auto text-center mb-16">
             <h4 class="text-accent font-semibold text-lg mb-2">Kontak</h4>
             <h2
-              class="font-bold text-text text-2xl mb-4 sm:text-3xl lg:text-4xl"
+              class="font-bold text-text text-2xl mb-4 sm:text-3xl lg:text-4xl dark:text-slate-200"
             >
               Hubungi Saya
             </h2>
@@ -631,12 +667,37 @@
               </svg>
             </a>
           </div>
-          <p class="font-medium text-xs text-slate-500 text-center">Made by ❤️ <a href="https://instagram.com/bimargg_" target="_blank" class="font-bold text-accent">Bima Rengga</a> 😎, menggunakan <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-500">Tailwind CSS</a>.</p>
+          <p class="font-medium text-xsnp text-slate-500 text-center">
+            Made by ❤️
+            <a
+              href="https://instagram.com/bimargg_"
+              target="_blank"
+              class="font-bold text-accent"
+              >Bima Rengga</a
+            >
+            😎, menggunakan
+            <a
+              href="https://tailwindcss.com"
+              target="_blank"
+              class="font-bold text-sky-500"
+              >Tailwind CSS</a
+            >.
+          </p>
         </div>
       </div>
     </footer>
 
     <!-- Footer Section End -->
+
+    <!-- Back To Top -->
+    <!-- <a
+      href="#home"
+      class="h-12 w-12 bg-accent rounded-full shadow-lg hidden z-[9999] bottom-4 right-4 p-4 hover:animate-pulse"
+      id="to-top"
+    >
+      <span class="flex justify-center mb-2">🔝</span>
+    </a> -->
+    <!-- Back To Top End -->
 
     <script src="dist/js/script.js"></script>
   </body>
