@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dist/css/final.css" />
+    <!-- <link rel="stylesheet" href="dist/output.css" /> -->
     <title>My Portofolio</title>
     <script>
       if (
@@ -314,7 +315,9 @@
                     alt="loghic"
                   />
                 </div>
-                <h3 class="font-semibold text-xl text-text mt-5 mb-3">
+                <h3
+                  class="font-semibold text-xl text-text mt-5 mb-3 dark:text-white"
+                >
                   Loghic Connect
                 </h3>
                 <p
@@ -335,7 +338,9 @@
                     alt="rubbin"
                   />
                 </div>
-                <h3 class="font-semibold text-xl text-text mt-5 mb-3">
+                <h3
+                  class="font-semibold text-xl text-text mt-5 mb-3 dark:text-white"
+                >
                   Rubbin Web Admin
                 </h3>
                 <p
@@ -355,7 +360,9 @@
                     alt="londree"
                   />
                 </div>
-                <h3 class="font-semibold text-xl text-text mt-5 mb-3">
+                <h3
+                  class="font-semibold text-xl text-text mt-5 mb-3 dark:text-white"
+                >
                   Londree.id
                 </h3>
                 <p
@@ -364,6 +371,51 @@
                   Londree.id adalah aplikasi untuk kasir laundry. Saya terlibat
                   pengembangan web admin dan api untuk aplikasi Londree.id ini
                   selama melakukan magang di Indonesia IT Yogyakarta.
+                </p>
+              </div>
+              <div class="mb-12 p-4 md:w-1/2">
+                <div class="rounded-md shadow-md overflow-hidden">
+                  <img
+                    src="dist/img/portofolio/moonton.png"
+                    width="w-full"
+                    alt="londree"
+                  />
+                </div>
+                <h3
+                  class="font-semibold text-xl text-text mt-5 mb-3 dark:text-white"
+                >
+                  Moonton
+                </h3>
+                <p
+                  class="font-medium text-base text-slate-500 dark:text-slate-300"
+                >
+                  Moonton adalah aplikasi streaming film. Project ini saya buat
+                  karena ketika ada waktu saya luangkan untuk menonton film.
+                  Saya membangun Website Moonton menggunakan framework laravel
+                  yang terintegrasi dengan Midtrans sebagai metode
+                  pembayarannya.
+                </p>
+              </div>
+              <div class="mb-12 p-4 md:w-1/2">
+                <div class="rounded-md shadow-md overflow-hidden">
+                  <img
+                    src="dist/img/portofolio/moneyrc.png"
+                    width="w-full"
+                    alt="londree"
+                  />
+                </div>
+                <h3
+                  class="font-semibold text-xl text-text mt-5 mb-3 dark:text-white"
+                >
+                  Money Record Flutter App
+                </h3>
+                <p
+                  class="font-medium text-base text-slate-500 dark:text-slate-300"
+                >
+                  Money Record Flutter App adalah aplikasi yang dibuat untuk
+                  membuat laporan pengeluaran harian, mingguan, hingga bulanan.
+                  Project ini saya bangun menggunakan Flutter dan PHP untuk
+                  API-nya.
                 </p>
               </div>
             </div>
@@ -482,7 +534,7 @@
           </div>
         </div>
 
-        <form action="#">
+        <form action="https://formsubmit.co/bimarenggaxvi@gmail.com" method="post">
           <div class="w-full lg:w-2/3 lg:mx-auto">
             <div class="w-full px-4 mb-8">
               <label for="name" class="text-base font-bold text-accent"
@@ -517,9 +569,13 @@
                 class="w-full bg-slate-200 text-text p-3 rounded-md focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent h-32"
               ></textarea>
             </div>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://bimarf.github.io/myPortofolio/">
+            <input type="hidden" name="_template" value="table">
             <div class="w-full px-4">
               <button
                 class="text-base text-text font-semibold bg-primarybutton py-3 px-8 w-full rounded-lg shadow-lg hover:bg-secondarybutton hover:text-accent transition duration-300 ease-in-out"
+                type="submit"
               >
                 Kirim
               </button>
